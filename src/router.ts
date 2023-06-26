@@ -5,7 +5,7 @@ import path from 'path';
 const router: Router = express.Router();
 
 // Dynamically require all the serverless functions in the `api/` directory
-sync('./api/**/*.ts').forEach((file) => {
+sync('./api/**/*.{ts,js}').forEach((file) => {
   const route =
     '/' +
     path
